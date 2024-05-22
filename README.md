@@ -18,3 +18,8 @@ python hello_milvus.py
 
 ### More details
 https://github.ibm.com/Alexander-Seymour/milvus-techzone/blob/main/README.md
+
+### install Milvus standalone with docker   
+    https://milvus.io/docs/install_standalone-docker-compose.md
+    download milvus-standalone-docker-compose.yml and save it as docker-compose.yml 
+    docker-compose up --build

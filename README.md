@@ -32,7 +32,8 @@ docker-compose down
 ### hello_milvus_dc.ipynb notebook
 Sample code to access Milvus
 
-### hello_milvus.py demonstrates the basic operations of PyMilvus, a Python SDK of Milvus.
+### hello_milvus.py 
+Demonstrates the basic operations of PyMilvus, a Python SDK of Milvus.
 1. connect to Milvus
 2. create collection
 3. insert data

@@ -29,10 +29,10 @@ Stop the container (when needed)
 docker-compose down
 ```
 
-#### hello_milvus_dc.ipynb notebook
+### hello_milvus_dc.ipynb notebook
 Sample code to access Milvus
 
-#### hello_milvus.py demonstrates the basic operations of PyMilvus, a Python SDK of Milvus.
+### hello_milvus.py demonstrates the basic operations of PyMilvus, a Python SDK of Milvus.
 1. connect to Milvus
 2. create collection
 3. insert data
@@ -41,13 +41,11 @@ Sample code to access Milvus
 6. delete entities by PK
 7. drop collection
 
-### Environment Setup
-Copy the .env.example file to a new file named .env.
-Update the values.
-
 ### Execute
-go to the folder and execute the command
+Go to the code folder and run notebook or execute the command
+```bash 
 python hello_milvus.py
+```
 
 ### More details
 https://github.ibm.com/Alexander-Seymour/milvus-techzone/blob/main/README.md

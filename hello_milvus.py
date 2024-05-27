@@ -20,9 +20,7 @@ def connect_to_milvus():
     #
     # Note: the `using` parameter of the following methods is default to "default".
     print(fmt.format("Connecting to Milvus"))
-    # connections.connect("default", host="158.175.189.249", port="8080", secure=True, server_pem_path="./cert.pem", server_name="localhost",user="root",password="4XYg2XK6sMU4UuBEjHq4EhYE8mSFO3Qq")
-    connections.connect("default", host=os.getenv("MILVUS_HOST", None), port=os.getenv("MILVUS_PORT", None), secure=True, server_pem_path="./cert.pem", server_name="localhost",user="root",password=os.getenv("MILVUS_PASS", None))
-    # connections.connect(host='127.0.0.1', port='19530')
+    connections.connect(host='127.0.0.1', port='19530')
     return connections
 
 def collection_exists(collection_name):

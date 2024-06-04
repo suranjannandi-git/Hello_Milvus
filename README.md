@@ -1,12 +1,18 @@
 # Hello Milvus
 Install Milvus db using docker-compose and access using python
 
-### Installing Milvus using docker-compose
-Download milvus-standalone-docker-compose.yml and save it as docker-compose.yml 
+### Prerequisite for milvus
+Create a docker network to keep the milvus components together
+```bash 
+docker network create milvus
+```
 
+### Installing Milvus using docker-compose
+    Download milvus-standalone-docker-compose.yml and save it as docker-compose.yml
     https://milvus.io/docs/install_standalone-docker-compose.md
+    or use the docker-compose.yml provided here 
     * did minor code changes to fix volumn error for local docker install 
-    
+   
 Open terminal session in the same folder as docker-compose.yml file
 
 Execute the docker compose command, this will download MongoDb and install in local docker
@@ -51,3 +57,7 @@ python hello_milvus.py
 ### More details
 https://github.ibm.com/Alexander-Seymour/milvus-techzone/blob/main/README.md
 
+
+### Trobleshooting
+In case docker-compose is not installed, follow this page for install  
+https://github.com/docker/compose/releases

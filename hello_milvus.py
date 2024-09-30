@@ -20,7 +20,8 @@ def connect_to_milvus():
     #
     # Note: the `using` parameter of the following methods is default to "default".
     print(fmt.format("Connecting to Milvus"))
-    connections.connect(host='127.0.0.1', port='19530')
+    # connections.connect(host='127.0.0.1', port='19530')
+    connections.connect(host='3.111.50.51', port='19530')
     return connections
 
 def collection_exists(collection_name):

@@ -20,10 +20,9 @@ def connect_to_milvus():
     #
     # Note: the `using` parameter of the following methods is default to "default".
     print(fmt.format("Connecting to Milvus"))
-    # connections.connect(host='127.0.0.1', port='19530')
-    connections.connect(host='milvus-default.apac-consulting-cluster-0c5bc49aeb77d71c8b1376de07ab7b72-0000.us-south.containers.appdomain.cloud/')
-
-    
+    connections.connect(host='127.0.0.1', port='19530')
+    # connections.connect(host='192.3.2.21', port='19530')
+    # connections.connect(host='milvus-default.apac-consulting-cluster-0c5bc49aeb77d71c8b1376de07ab7b72-0000.us-south.containers.appdomain.cloud/')
 
     return connections
 

@@ -21,7 +21,10 @@ def connect_to_milvus():
     # Note: the `using` parameter of the following methods is default to "default".
     print(fmt.format("Connecting to Milvus"))
     # connections.connect(host='127.0.0.1', port='19530')
-    connections.connect(host='3.111.50.51', port='19530')
+    connections.connect(host='milvus-default.apac-consulting-cluster-0c5bc49aeb77d71c8b1376de07ab7b72-0000.us-south.containers.appdomain.cloud/')
+
+    
+
     return connections
 
 def collection_exists(collection_name):
@@ -184,6 +187,6 @@ if collection_exists(collection_name):
 milvus_collection = create_collection(collection_name)
 entities, insert_result = insert_data(milvus_collection)
 create_index(milvus_collection)
-# search(milvus_collection)
+search(milvus_collection)
 # delete_entities_by_PK(milvus_collection)
 

@@ -1,30 +1,28 @@
-# Hello Milvus
+## Hello Milvus
 Install Milvus db using docker-compose and access using python
 
-### Prerequisite for milvus
-Create a docker network to keep the milvus components together
+### Milvus official page for docker deployment 
+https://milvus.io/docs/configure-docker.md?tab=component
+
+
+### Configure Milvus with Docker Compose
+
+##### Download a configuration file
 ```bash 
-docker network create milvus
+wget https://raw.githubusercontent.com/milvus-io/milvus/v2.5.10/configs/milvus.yaml
 ```
 
-### Installing Milvus using docker-compose
-    Download milvus-standalone-docker-compose.yml and save it as docker-compose.yml
-    https://milvus.io/docs/install_standalone-docker-compose.md
-    or use the docker-compose.yml provided here 
-    * did minor code changes to fix volumn error for local docker install 
-   
-Open terminal session in the same folder as docker-compose.yml file
-
-Execute the docker compose command, this will download MongoDb and install in local docker
+##### Download an installation file
 ```bash 
-docker-compose up -d
+wget https://github.com/milvus-io/milvus/releases/download/v2.5.10/milvus-standalone-docker-compose.yml -O docker-compose.yml
 ```
 
-Verify the container is running 
+##### Start Milvus
 ```bash 
-docker ps
+sudo docker-compose up -d
 ```
 
+##### additional useful commands
 View container logs
 ```bash 
 docker logs milvus-standalone
@@ -35,10 +33,12 @@ Stop the container (when needed)
 docker-compose down
 ```
 
-### hello_milvus_dc.ipynb notebook
+### Verify if milvus is running with python 
+
+##### hello_milvus_dc.ipynb notebook
 Sample code to access Milvus
 
-### hello_milvus.py 
+##### hello_milvus.py 
 Demonstrates the basic operations of PyMilvus, a Python SDK of Milvus.
 1. connect to Milvus
 2. create collection
@@ -48,16 +48,9 @@ Demonstrates the basic operations of PyMilvus, a Python SDK of Milvus.
 6. delete entities by PK
 7. drop collection
 
-### Execute
+##### Execute hello_milvus.py
 Go to the code folder and run notebook or execute the command
 ```bash 
 python hello_milvus.py
 ```
 
-### More details
-https://github.ibm.com/Alexander-Seymour/milvus-techzone/blob/main/README.md
-
-
-### Trobleshooting
-In case docker-compose is not installed, follow this page for install  
-https://github.com/docker/compose/releases
